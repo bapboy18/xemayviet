@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :configure_permitted_parameters
+
   def show
     @user = User.find params[:id]
   end
